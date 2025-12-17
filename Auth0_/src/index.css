@@ -1,68 +1,114 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* ===== BASE RESET ===== */
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0b0b;
+  color: #f5f5f5;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* ===== APP CONTAINER ===== */
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem 2.5rem;
+  background: #111;
+  border-radius: 14px;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.8rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+/* ===== HEADINGS ===== */
+.app-container h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.app-container h2 {
+  font-size: 1.1rem;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: #cfcfcf;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* ===== AUTH BUTTONS ===== */
+.button {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: #ffffff;
+  color: #0b0b0b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+/* Hover */
+.button:hover {
+  background: #eaeaea;
+  transform: translateY(-1px);
+}
+
+/* Active */
+.button:active {
+  transform: translateY(0);
+}
+
+/* Logout variant */
+.button.logout {
+  background: #0b0b0b;
+  color: #ffffff;
+  border: 1px solid #3a3a3a;
+}
+
+.button.logout:hover {
+  background: #151515;
+}
+
+/* Focus */
+.button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* ===== PROFILE ===== */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.profile img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 1px solid #2a2a2a;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.profile-email {
+  font-size: 0.9rem;
+  color: #a0a0a0;
 }
